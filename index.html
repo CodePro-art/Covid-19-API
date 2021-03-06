@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+  <script src="https://kit.fontawesome.com/5a1dafc887.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/load.css">
+  <link rel="stylesheet" href="./css/buttons.css">
+  <link rel="stylesheet" href="./css/canvas.css">
+  <link rel="stylesheet" href="./css/category.css">
+  <link rel="stylesheet" href="./css/mediaQuery.css">
+  <link rel="stylesheet" href="./css/details.css">
+  <title>Covid 19 API</title>
+  
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="title">Covid-19 statistics</h1>
+    <hr class="sep" />
+  </header>
+  
+  <section class="container">
+    <div id="canvas-wrap">
+      <canvas id="chart" class="fancy-border"></canvas>
+      <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <span>Loading</span>
+      </div>
+    </div>
+    <button disabled class="btn world" id="World">World</button>
+    <aside class="button-container">
+      <button disabled class="btn" id="Asia">Asia</button>
+      <button disabled class="btn" id="Africa">Africa</button>
+      <button disabled class="btn" id="Oceania">Oceania</button>
+      <button disabled class="btn" id="Americas">Americas</button>
+      <button disabled class="btn" id="Europe">Europe</button>
+    </aside>
+
+    <aside class="glossary-container">
+      <ul class="glossary">
+        <li><a href="#" id="confirmed"><i class="fas fa-virus"></i> confirmed</a></li>
+        <li><a href="#" id="deaths"><i class="fas fa-skull-crossbones"></i> deaths</a></li>
+        <li><a href="#" id="recovered"><i class="far fa-heart"></i> recovered</a></li>
+        <li><a href="#" id="critical"><i class="fas fa-temperature-high"></i> critical</a></li>
+      </ul>
+    </aside>
+
+    <select name="world" id="my-select" class="select" disabled>
+      <option selected disabled hidden>World</option>
+      <option class="option" value="Asia">Asia</option>
+      <option class="option" value="Oceania">Oceania</option>
+      <option class="option" value="Africa">Africa</option>
+      <option class="option" value="Americas">Americas</option>
+      <option class="option" value="Europe">Europe</option>
+    </select>
+    
+    <h1 class="title header" id="country-name">Country Details:</h1>
+    <div class="country-details">
+      <div class="detail">
+        <p>Total cases:</p>
+        <hr class="sep"/>
+        <div class="number-container">
+          <span class="number" id="confirmed"></span>
+        </div>
+      </div>
+      <div class="detail">
+        <p>New cases:</p>
+        <hr class="sep"/>
+        <div class="number-container">
+          <span class="number" id="newCases"></span>
+        </div>
+      </div>
+      <div class="detail">
+        <p>Total death:</p>
+        <hr class="sep"/>
+        <div class="number-container">
+          <span class="number" id="deaths"></span>
+        </div>
+      </div>
+      <div class="detail">
+        <p>New death:</p>
+        <hr class="sep"/>
+        <div class="number-container">
+          <span class="number" id="newDeaths"></span>
+        </div>
+      </div>
+      <div class="detail">
+        <p>Total recovered:</p>
+        <hr class="sep"/>
+        <div class="number-container">
+          <span class="number" id="recovered"></span>
+        </div>
+      </div>
+      <div class="detail">
+        <p>Critical condition:</p>
+        <hr class="sep"/>
+        <div class="number-container">
+          <span class="number" id="critical"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/class.js"></script>
+  <script src="./js/functions.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/chart.js"></script>
+  <script>initPage();</script>
+</body>
+</html>
