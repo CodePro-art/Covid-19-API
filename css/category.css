@@ -1,0 +1,83 @@
+/* CATEGORY STYLE */
+.category-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  color: #fff;
+}
+
+.fa-virus,
+.fa-skull-crossbones,
+.fa-heart,
+.fa-temperature-high {
+  transition: .3s;
+}
+#confirmed:hover >* {
+  color: rgb(0, 185, 0);
+  text-shadow: -1px 0 rgb(123, 255, 141),
+  0 1px rgb(123, 255, 141),
+  1px 0 rgb(123, 255, 141),
+  0 -1px rgb(123, 255, 141);
+}
+#deaths:hover >*  {
+  color: black;
+  text-shadow: -1px 0 #888,
+  0 1px #888,
+  1px 0 #888,
+  0 -1px #888;
+}
+#recovered:hover >*  {
+  color: red;
+  text-shadow: -1px 0 rgb(255, 152, 255),
+  0 1px rgb(255, 152, 255),
+  1px 0 rgb(255, 152, 255),
+  0 -1px rgb(255, 152, 255);
+}
+#critical:hover >*  {
+  color: red;
+  text-shadow: -1px 0 rgb(255, 168, 5),
+  0 1px rgb(255, 168, 5),
+  1px 0 rgb(255, 168, 5),
+  0 -1px rgb(255, 168, 5);
+}
+
+.confirmed >*{
+  color: rgb(0, 185, 0);
+  text-shadow: -1px 0 rgb(123, 255, 141),
+  0 1px rgb(123, 255, 141),
+  1px 0 rgb(123, 255, 141),
+  0 -1px rgb(123, 255, 141);
+}
+.deaths >*{
+  color: black;
+  text-shadow: -1px 0 #888,
+  0 1px #888,
+  1px 0 #888,
+  0 -1px #888;
+}
+.recovered >*{
+  color: red;
+  text-shadow: -1px 0 rgb(255, 152, 255),
+  0 1px rgb(255, 152, 255),
+  1px 0 rgb(255, 152, 255),
+  0 -1px rgb(255, 152, 255);
+}
+.critical >*{
+  color: red;
+  text-shadow: -1px 0 rgb(255, 168, 5),
+  0 1px rgb(255, 168, 5),
+  1px 0 rgb(255, 168, 5),
+  0 -1px rgb(255, 168, 5);
+}

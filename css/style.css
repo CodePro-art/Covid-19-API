@@ -1,0 +1,77 @@
+/* ===================== RESET =============================*/
+*, *:before, *:after {
+	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: .3s;
+}
+
+/* ===================== BODY ==============================*/
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  background: url(https://unsplash.it/1800/800?image=893);
+  background-size: cover;
+  background-position: 50%;
+  font-family: "Cutive Mono", monospace;
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(17, 17, 17, 0.9);
+}
+body >* {
+  z-index: 5;
+}
+
+/* ===================== HEADER ==============================*/
+.header {
+  margin: 0px auto;
+	padding: 1%;
+  color: #fff;
+}
+.title {
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* =================== MAIN CONTAINER =============================*/
+.container {
+  max-width: 1000px;
+  min-width: 600px;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.container >* {
+  margin: 10px 0px;
+}
+
+/* ============= DROPDOWN: SELECT -> OPTIONS =========================*/
+.select {
+  color: #fff;
+  padding: 5px;
+  background-color:rgba(128, 155, 155, 0.5);
+}
+select option {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.selected {
+  transition: .5s;
+  background-image: linear-gradient(#90b3c5 45%, #334f5e 55%);
+}
+
